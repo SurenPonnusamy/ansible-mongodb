@@ -1,0 +1,15 @@
+---
+- name: Installation of MongoDB in target server  
+  gather_facts: yes
+  vars:
+      major_version: "{{ major_version }}"
+      minor_version: "{{ minor_version }}"
+      target_node: "{{ target_node }}"
+      become_yes: "{{ become_yes }}"  
+  hosts: "{{ target_node }}"
+  roles:
+          #- my-role
+    - createDir
+    - addMongoRepo
+    - installMongo
+    - startService  

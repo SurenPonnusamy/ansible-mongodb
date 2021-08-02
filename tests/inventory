@@ -1,0 +1,7 @@
+[webserver]
+localhost
+
+[all:vars]
+ansible_connection=ssh
+ansible_ssh_user=ansibleuser
+ansible_ssh_pass=ansibleuser

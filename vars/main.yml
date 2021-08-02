@@ -1,0 +1,7 @@
+---
+major_version: "{{ major_version }}"
+minor_version: "{{ minor_version }}"
+target_node: "{{ target_node }}"
+become_yes: "{{ become_yes }}"
+
+# vars file for installer
