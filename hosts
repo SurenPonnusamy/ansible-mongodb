@@ -2,7 +2,7 @@
 localhost ansible_connection=local ansible_user=ubuntu
 
 [linux]
-138.91.245.95
+40.68.190.189
 
 [linux:vars]
 ansible_user=adminuser
