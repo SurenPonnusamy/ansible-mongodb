@@ -1,8 +1,15 @@
 [my_hosts]
 localhost ansible_connection=local ansible_user=ubuntu
 
+[linux]
+138.91.245.95
+
+[linux:vars]
+ansible_user=adminuser
+ansible_password=admin@123surendhar
+
 [windows]
-138.91.242.63
+104.42.185.243
 
 [windows:vars]
 ansible_user=adminuser

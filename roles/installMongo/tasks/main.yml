@@ -1,14 +1,26 @@
 ---
 - name: Install MongoDB for Debian
   apt:
-    name: mongodb-org
+    name: 
+      - mongodb-org-{{ major_version }}.{{ minor_version }}
+       #- mongodb-org-database-{{ major_version }}.{{ minor_version }}
+      - mongodb-org-server-{{ major_version }}.{{ minor_version }}
+      - mongodb-org-shell-{{ major_version }}.{{ minor_version }}
+      - mongodb-org-mongos-{{ major_version }}.{{ minor_version }}
+      - mongodb-org-tools-{{ major_version }}.{{ minor_version }}
     state: present
     update_cache: yes
   when: ansible_facts['os_family'] == "Debian"
 
 - name: Install MongoDB for RHEL
   yum:
-    name: mongodb-org
+    name: 
+      - mongodb-org-{{ major_version }}.{{ minor_version }}
+        #- mongodb-org-database-{{ major_version }}.{{ minor_version }}
+      - mongodb-org-server-{{ major_version }}.{{ minor_version }}
+      - mongodb-org-shell-{{ major_version }}.{{ minor_version }}
+      - mongodb-org-mongos-{{ major_version }}.{{ minor_version }}
+      - mongodb-org-tools-{{ major_version }}.{{ minor_version }}  
     state: present
     update_cache: yes
   when: ansible_facts['os_family'] == "RedHat"  
