@@ -1,7 +1,7 @@
 ---
 
 - name: get the username running the deploy
-  become: false
+  become: true
   local_action: command whoami
   register: username_on_the_host
 
