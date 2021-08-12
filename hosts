@@ -9,7 +9,7 @@ ansible_user=adminuser
 ansible_password=admin@123surendhar
 
 [windows]
-104.42.185.243
+23.99.86.240
 
 [windows:vars]
 ansible_user=adminuser
