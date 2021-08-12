@@ -8,6 +8,7 @@
 - debug: var=username_on_the_host
 
 - name: Create directories for MongoDB in Linux
+  become: true
   file:
     path: /data/db
     state: directory
