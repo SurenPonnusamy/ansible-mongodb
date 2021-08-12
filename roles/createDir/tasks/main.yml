@@ -1,5 +1,6 @@
 ---
 - name: Create directories for MongoDB in Linux
+  sudo: yes
   file:
     path: /data/db
     state: directory
