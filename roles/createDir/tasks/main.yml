@@ -3,7 +3,7 @@
   file:
     path: /data/db
     state: directory
-    mode: '0755'
+    mode: '0777'
   when: ansible_facts['os_family'] == "Debian" or ansible_facts['os_family'] == "RedHat" or ansible_facts['os_family'] == "CentOS"  
 
 - name: Create directories for MongoDB
